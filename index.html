@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Dee 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fireworks Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="overlay" id="overlay">
+    <header class="topbar">
+      <div class="title">🎂 Happy Birthday — Meri Pyari Dee 💖</div>
+      <div class="controls">
+        <button id="toggleAudio">Play Music ▶</button>
+      </div>
+    </header>
+
+    <main id="slideshow" class="slideshow">
+      <!-- First Page: Welcome -->
+      <section class="slide active intro-slide" id="introSlide">
+        <div class="intro-content">
+          <h1>🎉 Happy Birthday To You Dee 🎂</h1>
+          <p>Click anywhere to begin the surprise 💝</p>
+        </div>
+      </section>
+
+      <!-- Slide 1 -->
+      <section class="slide">
+        <div class="card">
+          <h2>1. Dil Se</h2>
+          <p>“Tere bina kya haal hai mera,<br>
+             Ye sirf dil hi samajh sakta hai,<br>
+             Har pal tujhe yaad karta hai,<br>
+             Ye dil sirf tujhme basta hai…”</p>
+        </div>
+      </section>
+
+      <!-- Slide 2 -->
+      <section class="slide">
+        <div class="card">
+          <h2>2. Yaadein</h2>
+          <p>“Tere saath guzre pal, yaad banke rehte hain,<br>
+             Har muskaan mein tera asar kehte hain,<br>
+             Zindagi chahe kitni bhi badal jaaye,<br>
+             Tere bina din adhoore lagte hain…”</p>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section class="slide">
+        <div class="card">
+          <h2>3. Tere Liye</h2>
+          <p>“Chand sitaron se maang liya hai tujhe,<br>
+             Duaon mein har baar manga hai tujhe,<br>
+             Zindagi ke har mod pe saath rehna,<br>
+             Yehi dua karta hoon tere liye…”</p>
+        </div>
+      </section>
+
+      <!-- Slide 4 -->
+      <section class="slide">
+        <div class="card">
+          <h2>4. Hamesha</h2>
+          <p>“Na jaane kab zindagi badal jaaye,<br>
+             Par tu hamesha mere saath nazar aaye,<br>
+             Khushiyon se tere daaman bharein,<br>
+             Yehi dua dil se hum kar jaaye…”</p>
+        </div>
+      </section>
+
+      <!-- Final Page: Photos + Video -->
+      <section class="slide final-slide">
+        <div class="final-content">
+          <div class="celebrate-header">
+            <h2>🎉 Celebration Time!</h2>
+            <p>Here are your special moments captured forever 💫</p>
+          </div>
+
+          <div class="gallery-and-video">
+            <div class="photo-gallery">
+              <img src="image 1.jpeg" alt="Photo 1">
+              <img src="img2.jpeg" alt="Photo 2">
+              <img src="image 6.jpg" alt="Photo 3">
+              <img src="img3.jpeg" alt="Photo 4">
+              <img src="img4.jpeg" alt="Photo 5">
+              <img src="img5.jpeg" alt="Photo 6">
+            </div>
+
+            <div class="video-wrap">
+              <!-- Replace with your own local video or YouTube embed -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/8QF9hM1MQwc?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="final-footer">
+            <button id="restartBtn">Show Shayari Again</button>
+            <div class="note">Click anywhere to create fireworks ✨</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-note">
+      Click anywhere to enable music & fireworks 💥
+    </footer>
+  </div>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="hbd2.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
