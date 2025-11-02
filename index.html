@@ -3,75 +3,267 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Happy Birthday Dee 💖</title>
+  <title>Happy Birthday Golu 💖</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0d1b2a, #000);
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    canvas#bgCanvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Topbar title centered and bold */
+    .topbar {
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .topbar .title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffcbf2;
+      text-shadow: 0 0 15px #ff66b2;
+    }
+
+    .topbar .controls {
+      position: absolute;
+      right: 20px;
+    }
+
+    button {
+      background: #ff4da6;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #ff007f; }
+
+    .slideshow {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide {
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      max-width: 600px;
+    }
+
+    .card h2 {
+      color: #ffb3c1;
+      margin-bottom: 15px;
+    }
+
+    .intro-slide {
+      background: radial-gradient(circle at center, #000428, #004e92);
+    }
+
+    .intro-content h1 {
+      font-size: 2.5rem;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff80ab; }
+      to { text-shadow: 0 0 25px #ff4081; }
+    }
+
+    .slide-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .slide-content img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      transition: transform 0.3s;
+    }
+    .slide-content img:hover { transform: scale(1.05); }
+
+    .final-slide {
+      background: radial-gradient(circle at top, #000, #1b2735);
+      flex-direction: column;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      transition: transform 0.3s;
+    }
+
+    .photo-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .video-wrap {
+      margin-top: 20px;
+    }
+
+    .final-footer {
+      margin-top: 20px;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Fireworks Canvas -->
   <canvas id="bgCanvas"></canvas>
 
   <div class="overlay" id="overlay">
     <header class="topbar">
-      <div class="title">🎂 Happy Birthday — Meri Pyari Dee 💖</div>
+      <div class="title">🎂 Happy Birthday Golu 💖</div>
       <div class="controls">
         <button id="toggleAudio">Play Music ▶</button>
       </div>
     </header>
 
     <main id="slideshow" class="slideshow">
-      <!-- First Page: Welcome -->
       <section class="slide active intro-slide" id="introSlide">
         <div class="intro-content">
-          <h1>🎉 Happy Birthday To You Dee 🎂</h1>
+          <h1>🎉 Happy Birthday To You Golu 🎂</h1>
           <p>Click anywhere to begin the surprise 💝</p>
         </div>
       </section>
 
-      <!-- Slide 1 -->
       <section class="slide">
-        <div class="card">
-          <h2>1. Dil Se</h2>
-          <p>“Tere bina kya haal hai mera,<br>
-             Ye sirf dil hi samajh sakta hai,<br>
-             Har pal tujhe yaad karta hai,<br>
-             Ye dil sirf tujhme basta hai…”</p>
+        <div class="slide-content">
+          <img src="img1.jpg" alt="Golu 1">
+          <div class="card">
+            <h2>1. Khoobsurat</h2>
+            <p>"Tu chand nahi, lekin usse kam bhi nahi,<br>
+            Teri khamoshi bhi kuch keh jaati hai,<br>
+            Har ada mein ek nazakat si hai,<br>
+            Jaise hawa bhi tujhe choone se pehle sharma jaati hai."</p>
+          </div>
         </div>
       </section>
 
-      <!-- Slide 2 -->
       <section class="slide">
-        <div class="card">
-          <h2>2. Yaadein</h2>
-          <p>“Tere saath guzre pal, yaad banke rehte hain,<br>
-             Har muskaan mein tera asar kehte hain,<br>
-             Zindagi chahe kitni bhi badal jaaye,<br>
-             Tere bina din adhoore lagte hain…”</p>
+        <div class="slide-content">
+          <img src="img2.jpg" alt="Golu 2">
+          <div class="card">
+            <h2>2. Aadayein </h2>
+            <p>“Na jaane kya jaadu hai tere husn mein,<br>
+            Koi dekhe to bas kho jaaye us pal mein,<br>
+            Teri muskaan mein wo asar hai jaanam,<br>
+            Dil bhi kahe — bas yahi thahar jaaye jeevan mein.”</p>
+          </div>
         </div>
       </section>
 
-      <!-- Slide 3 -->
       <section class="slide">
-        <div class="card">
-          <h2>3. Tere Liye</h2>
-          <p>“Chand sitaron se maang liya hai tujhe,<br>
-             Duaon mein har baar manga hai tujhe,<br>
-             Zindagi ke har mod pe saath rehna,<br>
-             Yehi dua karta hoon tere liye…”</p>
+        <div class="slide-content">
+          <img src="img3.jpg" alt="Golu 3">
+          <div class="card">
+            <h2>3. Aankhon</h2>
+            <p>“Tere baalon ki khushboo, teri aankhon ki chamak,<br>
+            Tera naam sunte hi dhadak jaaye dil har dam,<br>
+            Tu haseen nahi, ek ehsaas hai,<br>
+            Jise dekh ke khuda bhi kahe — Wah! Kya khaas hai!”</p>
+          </div>
         </div>
       </section>
 
-      <!-- Slide 4 -->
       <section class="slide">
-        <div class="card">
-          <h2>4. Hamesha</h2>
-          <p>“Na jaane kab zindagi badal jaaye,<br>
-             Par tu hamesha mere saath nazar aaye,<br>
-             Khushiyon se tere daaman bharein,<br>
-             Yehi dua dil se hum kar jaaye…”</p>
+        <div class="slide-content">
+          <img src="img4.jpg" alt="Golu 4">
+          <div class="card">
+            <h2>4. Sunshine </h2>
+            <p>“Tere chehre ki roshni kuch aisi hai,<br>
+            Jaise subah ki pehli kiran ho,<br>
+            Har nazar ruk jaaye tujh par,<br>
+            Jaise zindagi ko ek wajah mil gayi ho…”</p>
+          </div>
         </div>
       </section>
 
-      <!-- Final Page: Photos + Video -->
+      <section class="slide">
+        <div class="slide-content">
+          <img src="img5.jpg" alt="Golu 5">
+          <div class="card">
+            <h2>5. Muskurahat</h2>
+            <p>“Teri hasi mein hai wo baat kuch khaas,<br>
+            Jaise saara jahaan ho tujhpe fida,<br>
+            Har pal tujhe dekhkar lagta hai bas,<br>
+            Zindagi ka matlab tu hi hai mera aasra.”</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final Slide -->
       <section class="slide final-slide">
         <div class="final-content">
           <div class="celebrate-header">
@@ -81,30 +273,31 @@
 
           <div class="gallery-and-video">
             <div class="photo-gallery">
-              <img src="image 1.jpeg" alt="Photo 1">
-              <img src="img2.jpeg" alt="Photo 2">
-              <img src="image 6.jpg" alt="Photo 3">
-              <img src="img3.jpeg" alt="Photo 4">
-              <img src="img4.jpeg" alt="Photo 5">
-              <img src="img5.jpeg" alt="Photo 6">
+              <img src="img 11.jpg" alt="Photo 1">
+              <img src="img1.jpg" alt="Photo 2">
+              <img src="img2.jpg" alt="Photo 3">
+              <img src="img3.jpg" alt="Photo 4">
+              <img src="img4.jpg" alt="Photo 5">
+              <img src="img5.jpg" alt="Photo 6">
             </div>
 
             <div class="video-wrap">
-              <!-- Replace with your own local video or YouTube embed -->
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/8QF9hM1MQwc?rel=0&autoplay=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe id="celebrationVideo" width="560" height="315"
+                src="https://www.youtube.com/embed/8QF9hM1MQwc?rel=0&autoplay=1&mute=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
           </div>
 
           <div class="final-footer">
             <button id="restartBtn">Show Shayari Again</button>
-            <div class="note">Click anywhere to create fireworks ✨</div>
+            <div class="note">Enjoy the fireworks & music ✨</div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer-note">
-      Click anywhere to enable music & fireworks 💥
+      Enjoy continuous fireworks and music 💥
     </footer>
   </div>
 
@@ -112,6 +305,94 @@
     <source src="hbd2.mp3" type="audio/mpeg" />
   </audio>
 
-  <script src="script.js"></script>
+  <script>
+    let slides = document.querySelectorAll(".slide");
+    let current = 0;
+    let interval;
+    const bgCanvas = document.getElementById("bgCanvas");
+    const ctx = bgCanvas.getContext("2d");
+    const bgAudio = document.getElementById("bgAudio");
+    const toggleBtn = document.getElementById("toggleAudio");
+    const restartBtn = document.getElementById("restartBtn");
+    const introSlide = document.getElementById("introSlide");
+
+    bgCanvas.width = window.innerWidth;
+    bgCanvas.height = window.innerHeight;
+
+    // --- Automatic Fireworks ---
+    const fireworks = [];
+
+    function randomFirework() {
+      const x = Math.random() * bgCanvas.width;
+      const y = Math.random() * bgCanvas.height * 0.7;
+      fireworks.push({ x, y, life: 0 });
+    }
+
+    function animateFireworks() {
+      ctx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+      for (let f of fireworks) {
+        f.life += 2;
+        for (let i = 0; i < 12; i++) {
+          const angle = (Math.PI * 2 * i) / 12;
+          const x = f.x + Math.cos(angle) * f.life * 3;
+          const y = f.y + Math.sin(angle) * f.life * 3;
+          ctx.fillStyle = `hsl(${f.life * 10}, 100%, 60%)`;
+          ctx.fillRect(x, y, 3, 3);
+        }
+      }
+      requestAnimationFrame(animateFireworks);
+    }
+
+    setInterval(randomFirework, 500);
+    animateFireworks();
+
+    // --- Music ---
+    function playAudio() {
+      bgAudio.play().catch(() => {});
+    }
+
+    toggleBtn.onclick = () => {
+      if (bgAudio.paused) {
+        bgAudio.play();
+        toggleBtn.textContent = "Pause Music ⏸";
+      } else {
+        bgAudio.pause();
+        toggleBtn.textContent = "Play Music ▶";
+      }
+    };
+
+    // --- Slideshow ---
+    function nextSlide() {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+
+      // Autoplay video when final slide appears
+      if (current === slides.length - 1) {
+        clearInterval(interval);
+        const videoFrame = document.getElementById("celebrationVideo");
+        videoFrame.src = videoFrame.src; // reload ensures autoplay triggers
+      }
+    }
+
+    function startSlideshow() {
+      slides[0].classList.remove("active");
+      slides[1].classList.add("active");
+      current = 1;
+      interval = setInterval(nextSlide, 7000);
+    }
+
+    introSlide.addEventListener("click", () => {
+      startSlideshow();
+      playAudio();
+    });
+
+    restartBtn.addEventListener("click", () => {
+      slides.forEach((s) => s.classList.remove("active"));
+      slides[0].classList.add("active");
+      current = 0;
+      clearInterval(interval);
+    });
+  </script>
 </body>
 </html>
